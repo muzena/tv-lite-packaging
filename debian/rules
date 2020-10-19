@@ -1,0 +1,53 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+#export COMPILE_FLAGS="-O0"
+#export DEB_BUILD_MAINT_OPTIONS = hardening=-all
+#export DEB_CFLAGS_MAINT_APPEND  = -Wno-error
+#export DEB_LDFLAGS_MAINT_APPEND = -Wno-error
+#DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	cd src && cmake . && make
+#override_dh_autobuild:
+#	cd src && make
+override_dh_auto_install:
+	install -pdm755 debian/tv-lite/usr/bin/
+	install -pdm755 debian/tv-lite/usr/share/applications/
+	install -pdm755 debian/tv-lite/usr/share/locale/
+	install -pdm755 debian/tv-lite/usr/share/locale/de
+	install -pdm755 debian/tv-lite/usr/share/locale/de/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/el
+	install -pdm755 debian/tv-lite/usr/share/locale/el/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/es
+	install -pdm755 debian/tv-lite/usr/share/locale/es/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/hr
+	install -pdm755 debian/tv-lite/usr/share/locale/hr/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/it
+	install -pdm755 debian/tv-lite/usr/share/locale/it/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/ro
+	install -pdm755 debian/tv-lite/usr/share/locale/ro/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/ru
+	install -pdm755 debian/tv-lite/usr/share/locale/ru/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/pixmaps/
+	install -pdm755 debian/tv-lite/usr/share/TVLite/
+	install -Dm755 cmake-build-Release/output/TVLite debian/tv-lite/usr/bin/
+	install -Dm664 src/de.gmo debian/tv-lite/usr/share/locale/de/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/el.gmo debian/tv-lite/usr/share/locale/el/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/es.gmo debian/tv-lite/usr/share/locale/es/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/hr.gmo debian/tv-lite/usr/share/locale/hr/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/it.gmo debian/tv-lite/usr/share/locale/it/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/ro.gmo debian/tv-lite/usr/share/locale/ro/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/ru.gmo debian/tv-lite/usr/share/locale/ru/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/TVLite.desktop debian/tv-lite/usr/share/applications/
+	install -Dm664 src/TVLite.png debian/tv-lite/usr/share/pixmaps/
+	install -Dm664 src/logo.png debian/tv-lite/usr/share/TVLite/
+
+
+
+
