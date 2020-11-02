@@ -43,6 +43,7 @@ override_dh_auto_install:
 	install -Dm664 src/el.gmo debian/tv-lite/usr/share/locale/el/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/es.gmo debian/tv-lite/usr/share/locale/es/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/hr.gmo debian/tv-lite/usr/share/locale/hr/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/hr.gmo debian/tv-lite/usr/share/locale/hu/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/it.gmo debian/tv-lite/usr/share/locale/it/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/ro.gmo debian/tv-lite/usr/share/locale/ro/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/ru.gmo debian/tv-lite/usr/share/locale/ru/LC_MESSAGES/TVLite.mo
