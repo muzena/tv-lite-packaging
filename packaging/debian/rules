@@ -28,6 +28,8 @@ override_dh_auto_install:
 	install -pdm755 debian/tv-lite/usr/share/locale/es/LC_MESSAGES/
 	install -pdm755 debian/tv-lite/usr/share/locale/hr
 	install -pdm755 debian/tv-lite/usr/share/locale/hr/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/hu
+	install -pdm755 debian/tv-lite/usr/share/locale/hu/LC_MESSAGES/
 	install -pdm755 debian/tv-lite/usr/share/locale/it
 	install -pdm755 debian/tv-lite/usr/share/locale/it/LC_MESSAGES/
 	install -pdm755 debian/tv-lite/usr/share/locale/ro
