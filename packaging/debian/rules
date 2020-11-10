@@ -36,6 +36,8 @@ override_dh_auto_install:
 	install -pdm755 debian/tv-lite/usr/share/locale/ro/LC_MESSAGES/
 	install -pdm755 debian/tv-lite/usr/share/locale/ru
 	install -pdm755 debian/tv-lite/usr/share/locale/ru/LC_MESSAGES/
+	install -pdm755 debian/tv-lite/usr/share/locale/tr
+	install -pdm755 debian/tv-lite/usr/share/locale/tr/LC_MESSAGES/
 	install -pdm755 debian/tv-lite/usr/share/pixmaps/
 	install -pdm755 debian/tv-lite/usr/share/TVLite/
 	install -Dm755 cmake-build-Release/output/TVLite debian/tv-lite/usr/bin/
@@ -47,6 +49,7 @@ override_dh_auto_install:
 	install -Dm664 src/it.gmo debian/tv-lite/usr/share/locale/it/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/ro.gmo debian/tv-lite/usr/share/locale/ro/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/ru.gmo debian/tv-lite/usr/share/locale/ru/LC_MESSAGES/TVLite.mo
+	install -Dm664 src/tr.gmo debian/tv-lite/usr/share/locale/tr/LC_MESSAGES/TVLite.mo
 	install -Dm664 src/TVLite.desktop debian/tv-lite/usr/share/applications/
 	install -Dm664 src/TVLite.png debian/tv-lite/usr/share/pixmaps/
 	install -Dm664 src/logo.png debian/tv-lite/usr/share/TVLite/
